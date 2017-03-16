@@ -67,8 +67,34 @@ python append_files.py --ifile file1 --ofile /dir1/dir2/outfile.csv --chunks 10
 
 python append_files.py --ifile file1 --samplingCols 'CUSTID1|CUSTID2' --d '|'
 
+# check_col.sh
 
 ### Description
+Count Number of columns in all rows of a file
+To be usable for other UNIX Commands, the file should same number of columns in all the rows
+In case a cell value also contains delimiter, clean the file using cleantext tool
+usage: pipe the stream into check_col.sh followed by delimiter
+
 ### Usage 
-### Arguments
+cat filename | check_col.sh ','
+
+# cut_by_name.sh
+### Description
+Cut one/multiple columns from unix input stream
+### Usage 
+cut_by_name.sh -t delimiter -n 'columns separated by ,'
 ### Example  
+cat filename | cut_by_name.sh -t "|" -n "COL1,COL2" | historgram.pl
+
+# histogram.pl
+
+### Description
+Get frequency count of an input stream in UNIX pipe operations
+
+### Usage 
+Pipe the stream into histogram.pl
+
+### Example  
+cat filename | cut -d\| -f1 | histogram.pl
+
+cat filename | cut_by_name.sh -t ""|"" -n ""COL1,COL2"" | historgram.pl
