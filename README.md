@@ -70,12 +70,12 @@ python append_files.py --ifile file1 --samplingCols 'CUSTID1|CUSTID2' --d '|'
 # check_col.sh
 
 ### Description
-Count Number of columns in all rows of a file
-To be usable for other UNIX Commands, the file should same number of columns in all the rows
-In case a cell value also contains delimiter, clean the file using cleantext tool
-usage: pipe the stream into check_col.sh followed by delimiter
+Count Number of columns in all rows of a file. To be usable for other UNIX Commands, the file should same number of columns in all the rows. In case a cell value also contains delimiter, clean the file using cleantext tool.
 
 ### Usage 
+pipe the stream into check_col.sh followed by delimiter
+
+### Example  
 cat filename | check_col.sh ','
 
 # cut_by_name.sh
