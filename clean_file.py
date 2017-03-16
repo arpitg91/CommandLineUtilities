@@ -11,12 +11,12 @@ reader = csv.reader(infile,delimiter=delimiter)
 writer = csv.writer(outfile,delimiter=delimiter)
 
 header = reader.next()
-writer.write(map(lambda x: x.upper().replace('  ','').replacce(' ','_'),header))
+writer.writerow(map(lambda x: x.upper().replace('  ','').replace(' ','_'),header))
 
 for row in reader:
     row = map(lambda x: x.replace(delimiter,'').strip().replace('\r',''),row)
     if len(row) == len(header):
-        writer.write(row)
+        writer.writerow(row)
         
 infile.close()
 outfile.close()
