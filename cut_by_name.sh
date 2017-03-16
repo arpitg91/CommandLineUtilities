@@ -1,10 +1,3 @@
-##=======================================================================================
-## Name: cut_by_name.sh
-## Input file: contains the header
-## Output file: with the selected columns. The order is identical as the given parameters
-## Author: Jieying.Chen
-##=======================================================================================
-
 THIS=`basename $0`
 err_msg="Usage: cat mst_file|$THIS <-n colums> <-t dlm> [-r] [-v]
       -n :  column names to be selected. Seperated by comma;
